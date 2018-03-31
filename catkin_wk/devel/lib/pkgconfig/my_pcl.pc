@@ -1,0 +1,8 @@
+prefix=/home/ke/catkin_wk/devel
+
+Name: my_pcl
+Description: Description of my_pcl
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ke/catkin_wk/devel/lib 
+Requires: 
