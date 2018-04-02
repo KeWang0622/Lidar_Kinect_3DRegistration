@@ -1,0 +1,8 @@
+prefix=/home/ke/rosworkspace/devel
+
+Name: hesai_lidar
+Description: Description of hesai_lidar
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ke/rosworkspace/devel/lib 
+Requires: 
