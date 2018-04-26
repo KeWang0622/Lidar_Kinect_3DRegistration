@@ -2,6 +2,7 @@
 clc;clear;close all
 
 ptCloud_kinect = pcread('output_0329.pcd');
+ptCloud_kinect1 = pcread('output_0329.pcd');
 figure;
 A = [-1 0 0 0; ...
      0 -1 0 0; ...
@@ -64,6 +65,10 @@ figure;pcshow(ptCloudAligned);
 %%
 mergeSize = 0.005;
 ptCloudScene = pcmerge_wk(ptCloud_Lidar, ptCloudAligned, mergeSize);
-
-figure;pcshow(ptCloudScene)
+ptCloudScene1 = pcmerge_wk(ptCloud_Lidar, ptCloud_kinect1, mergeSize);
+ptCloudScene2 = pcmerge_wk(ptCloud_Lidar, ptCloud_kinect, mergeSize);
+h = figure; set(h,'color',[1,1,1]);pcshow(ptCloudScene)
+h1 = figure; set(h1,'color',[1,1,1]);pcshow(ptCloudScene1)
+h2 = figure; set(h2,'color',[1,1,1]);pcshow(ptCloudScene2)
 pcwrite(ptCloudScene,'object3d.pcd','Encoding','ascii');
+
